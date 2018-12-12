@@ -1,5 +1,3 @@
-'use strict';
-
 /*
 * {num} type:Number like 100
 * {format} type: String like '￥#.00'
@@ -21,7 +19,6 @@ function NumberFormat(num, format) {
     }).join('') + (floatNum ? ('.' + floatNum) : '');
     return format.replace('#.' + new Array(decimalPlace).fill(0).join(''), value);
   } catch (err) {
-    console.error(err);
     return num;
   }
 }

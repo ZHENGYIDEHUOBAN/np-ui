@@ -12,10 +12,6 @@ import NpComponents from '@/components';
 Vue.use(ElementUI);
 Vue.use(NpComponents);
 
-if (window && window.Vue) {
-  window.Vue.use(NpComponents);
-}
-
 Vue.config.productionTip = false;
 
 new Vue({

@@ -755,7 +755,6 @@ export default {
       }
     },
     handleCheckbox({ row, rowIndex }, { isChecked }) {
-      console.log(row);
     },
     /* 树表格方法 */
     // 行展开动画
