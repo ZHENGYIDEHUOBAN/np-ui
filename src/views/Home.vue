@@ -14,7 +14,7 @@
 </template>
 
 <script>
-
+import { page, main } from '@/api';
 export default {
   name: 'home',
   data() {
@@ -46,6 +46,13 @@ export default {
         ]
       }
     };
+  },
+  async created() {
+    await main.Login('admin', 'NJPoweron@123');
+    const result = await page.PageLoad({
+      KeyWord: 'NPS_DEV_MenuWin'
+    });
+    console.log(result);
   }
 };
 </script>
